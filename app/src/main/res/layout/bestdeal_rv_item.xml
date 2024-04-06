@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:elevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_best_deal"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/test_image"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBestDealProductName"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Scotch Premium"
+            app:layout_constraintEnd_toStartOf="@id/btn_see_product"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/img_best_deal"
+            app:layout_constraintTop_toTopOf="@id/img_best_deal" />
+
+        <TextView
+            android:id="@+id/tvPriceAfterPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="$2000"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_see_product"
+            app:layout_constraintStart_toEndOf="@id/tvBestDealPrice"
+            app:layout_constraintTop_toTopOf="@id/tvBestDealPrice"/>
+
+        <TextView
+            android:id="@+id/tvBestDealPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="$1600"
+            android:textColor="@color/g_gray700"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/tvBestDealProductName"
+            app:layout_constraintTop_toBottomOf="@id/tvBestDealProductName" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/btn_see_product"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:layout_marginHorizontal="5dp"
+            android:background="@drawable/blue_background"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/g_see_product"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvPriceAfterPercentage"
+            app:layout_constraintTop_toTopOf="@id/tvBestDealProductName"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
